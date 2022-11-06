@@ -12,7 +12,7 @@ namespace HashTables
     {
         static void Main(string[] args)
         {
-            //UC-2
+            //UC-3
             Console.WriteLine("Welcome to Hash Tables");
             MyMapNode<int, string> hash = new MyMapNode<int, string>(6);
             hash.Add(1,"Paranoids");
@@ -35,6 +35,16 @@ namespace HashTables
             hash.Add(17, "avoidable");
             hash.Add(18, "situation");
 
+
+            Console.WriteLine("Before Removing: ");
+            for (int i = 0; i <= 18; i++)
+            {
+                Console.Write(hash.Get(i) + " ");
+            }
+
+            hash.Remove(17);
+            Console.WriteLine();
+            Console.WriteLine("After Removing: ");
             for (int i = 0; i <= 18; i++)
             {
                 Console.Write(hash.Get(i)+" ");
